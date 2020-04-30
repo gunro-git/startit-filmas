@@ -6,9 +6,9 @@ import time
 
 # Iegūstam DB informāciju no vides mainīgajiem
 # lai nebūtu jāglabā parole publiski pieejama
-ELEPHANT_HOST = os.getenv("ELEPHANT_HOST")
-ELEPHANT_NAME = os.getenv("ELEPHANT_NAME")
-ELEPHANT_PASSWORD = os.getenv("ELEPHANT_PASSWORD")
+ELEPHANT_HOST = "balarama.db.elephantsql.com"
+ELEPHANT_NAME = "wkmiuoho"
+ELEPHANT_PASSWORD = "DpnxuBvFOVdQR1VWYIDuISTVUUMD8vEc"
 
 # Pieslēgums datubāzei izveidots un pieejams globāli
 dsn = "host={} dbname={} user={} password={}".format(ELEPHANT_HOST, ELEPHANT_NAME, ELEPHANT_NAME, ELEPHANT_PASSWORD)
@@ -95,7 +95,7 @@ print(veido_vd_tabulu())
 
 t1 = time.perf_counter()
 print("Piepilda tabulu")
-print(piepilda_vd_tabulu("dati/vardadienas.txt"))
+print(piepilda_vd_tabulu("vardadienas.txt"))
 t2 = time.perf_counter()
 print(f"Datu importēšana aizņēma {t2 - t1:0.4f} sekundes")
 
